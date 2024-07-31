@@ -21,16 +21,33 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar me-auto mb-2 mb-md-0">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
             <a href="{% url 'learning_logs:topics' %}" class="nav-link">Tematy</a>
           </li>
         </ul> <!--Koniec sekcji łączy po lewej stronie paska nawigacyjnego.-->
+
+        <!--Łącza związane z kontem użytkownika-->
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+
+          {% if user.is_authenicated %}
+            <li class="nav-item">
+              <span class="navbar-text me-2">Witaj, {{ user.username }}.</span>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a href="{% url 'accounts:register' %}" class="nav-link">Rejestruj</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'accounts:login' %}" class="nav-link">Zaloguj</a>
+            </li>
+          {% endif %}
+        </ul> <!--Koniec łączy związanych z kontem użytkownika-->
       </div> <!--Koniec rozwijalnych elementów paska nawigacyjnego.-->
     </div> <!--Koniec kontenera paska nawigacyjnego.-->
   </nav> <!--Koniec paska nawigacyjnego.-->
 
   {% block content %} {% endblock content %}
-  
+
 </body>
 </html>
