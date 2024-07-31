@@ -43,6 +43,14 @@
             </li>
           {% endif %}
         </ul> <!--Koniec łączy związanych z kontem użytkownika-->
+
+        {% if user.is_authenicated %}
+          <form action="{% url 'accounts:logout' %}" method="post">
+            {% csrf_token %}
+            <button name="submit" class="btn btn-outline-secondary btn-sm">Wyloguj</button>
+          </form>
+        {% endif %}
+
       </div> <!--Koniec rozwijalnych elementów paska nawigacyjnego.-->
     </div> <!--Koniec kontenera paska nawigacyjnego.-->
   </nav> <!--Koniec paska nawigacyjnego.-->
