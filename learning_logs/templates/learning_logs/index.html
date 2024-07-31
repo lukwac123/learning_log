@@ -1,5 +1,13 @@
 {% extends "learning_logs/base.html" %}
 
-{% block content %}
-  <p>Learning Log pomaga w monitorowaniu postępów w nauce podczas poznawania dowolnego tematu.</p>
-{% endblock content %}
+{% block page_header %}
+  <div class="p-3 mb-4 bg-light border rounded-3">
+    <div class="container-fluid py-4">
+      <h1 class="display-3">Monitoruj postępy w nauce</h1>
+
+      <p class="lead">Załóż konto, aby rozpocząć korzystanie z aplikacji Learning Log oraz wyświetlić listę poznawanych tematów. Gdy nauczysz się czegoś nowego na dany temat, utwórz wpis podsumowujący to, czego się nauczyłeś.</p>
+
+      <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-lg mt-1">Zarejestruj konto &raquo;</a>
+    </div>
+  </div>
+{% endblock page_header %}
