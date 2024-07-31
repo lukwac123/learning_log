@@ -8,6 +8,29 @@
   {% load django_bootstrap5 %}
   {% bootstrap_css %}
   {% bootstrap_javascript %}
-  
+
 </head>
+<body>
+  
+  <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+    <div class="container-fluid">
+      <a href="{% url 'learning_logs:index' %}" class="navbar-brand">Learning Log</a>
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a href="{% url 'learning_logs:topics' %}" class="nav-link">Tematy</a>
+          </li>
+        </ul> <!--Koniec sekcji łączy po lewej stronie paska nawigacyjnego.-->
+      </div> <!--Koniec rozwijalnych elementów paska nawigacyjnego.-->
+    </div> <!--Koniec kontenera paska nawigacyjnego.-->
+  </nav> <!--Koniec paska nawigacyjnego.-->
+
+  {% block content %} {% endblock content %}
+  
+</body>
 </html>
