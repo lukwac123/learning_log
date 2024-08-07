@@ -1,0 +1,3 @@
+# Wymagania od uruchomienia projektu w serwerze WWW.
+gunicorn
+psycopg2
