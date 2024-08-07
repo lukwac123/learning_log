@@ -7,7 +7,7 @@
 
 {% block content %}
   <p>
-    <a href="{% url 'learning_logs:new_entry' topic.id %}">Dodaj nowy wpis</a>
+    <a href="{% url 'learning_logs:new_entry' topic.id %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Dodaj nowy wpis</a>
   </p>
 
   {% for entry in entries %}
@@ -16,7 +16,7 @@
       <h4 class="card-header">
         {{ entry.date_added|date:'d M Y H:i' }}
           <small>
-            <a href="{% url 'learning_logs:edit_entry' entry.id %}">Edytuj wpis</a>
+            <a href="{% url 'learning_logs:edit_entry' entry.id %}" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Edytuj wpis</a>
           </small>
       </h4>
       <!-- Treść kart razem z tekstem wpisu. -->
