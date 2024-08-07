@@ -2,7 +2,7 @@ name: "ll_project"
 type: "python:3.12"
 
 relationships:
-  database: "db.postgresql"
+  database: "db:postgresql"
 
 # Konfiguracja aplikacji, gdy nie jest udostępniona w internecie.
 
