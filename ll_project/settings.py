@@ -159,3 +159,7 @@ if config.is_valid_platform():
                 'PORT': db_settings['port'],
             },
         }
+
+    if config.is_valid_platform():
+        ALLOWED_HOSTS.append('platform.sh')
+        DEBUG = False
