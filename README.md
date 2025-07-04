@@ -17,6 +17,34 @@ jak [**_Learning Log_**](https://main-bvxea6i-mfi522clqjnxe.us-3.platformsh.site
 
 <sup>Rys.1 Strona główna aplikacji Learning Log</sup>
 
+## Funkcjonalności
+
+- Rejestracja i logowanie użytkownika
+- Tworzenie i edycja tematów
+- Tworzenie i edycja wpisów do tematów
+- Przeglądanie własnych tematów i wpisów
+- Ograniczenie dostępu – użytkownik widzi tylko swoje dane
+
+## Struktura katalogów
+
+| 📁 learning_log           | Katalog projektu                                                        |
+|:--------------------------|:------------------------------------------------------------------------|
+| 📁 learning_log/         | Główna konfiguracja projektu Django                                     |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📄 settings.py        | Ustawienia projektu                                                     |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📄 urls.py            | Główne trasy URL                                                        |
+| 📁 learning_logs/        | Aplikacja obsługująca notatki                                           |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📄 models.py          | Modele: `Topic`, `Entry`                                                |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📄 views.py           | Widoki aplikacji                                                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📄 forms.py           | Formularze Django                                                       |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📄 urls.py            | Trasy URL aplikacji                                                     |
+| 📁 templates/            | Szablony HTML                                                           |
+| 📁 static/               | Pliki CSS (np. Bootstrap), JS                                           |
+| 📁 users/                | Aplikacja do zarządzania kontami użytkowników                           |
+| 📄 db.sqlite3            | Baza danych SQLite                                                      |
+| 📄 manage.py             | Narzędzie do zarządzania projektem Django                              |
+| 📄 requirements.txt      | Lista zależności (Django)                                               |
+| 📄 README.md             | Dokumentacja projektu   
+
 ## 1. Przygotowanie projektu.
 
 ### 1.1 Utworzenie środowiska wirtualnego.
@@ -68,7 +96,23 @@ Aby sprawdzić poprawność przygotowanego projektu należy wydać polecenie:
 Jeżeli wszystko zostało wykonane poprawnie, otwierając przeglądarkę stron internetowych i wybierając adres URL: ```http://localhost:8000/``` lub ```http://127.0.0.1:8000/```
 powinien pojawić się ekran startowy framework'a Django z informacją że instalacja jego przebiegła pomyślnie.
 
+## 2. Tworzenie stron
+
+Tworzenie szkieletu aplikacji: modele Topic i Entry, konfiguracja admina Django, tworzenie widoków, szablonów i routingu dla przeglądania tematów i wpisów.
+
+## 3. Finalizacja aplikacji
+
+Wprowadzenie systemu użytkowników: rejestracja, logowanie, przypisywanie danych do użytkowników, kontrola dostępu. Dodanie funkcjonalności dodawania, edytowania i usuwania wpisów.
+
+## Źródło
 
 
+_Python. Instrukcje dla programisty. Praktyczne wprowadzenie do programowania_  
+Autor: Eric Matthes  
+Wydanie II (oryg. Python Crash Course, 2nd Edition)  
+Wydawnictwo Helion, 2021  
 
-
+Rozdziały:  
+Rozdział 18 – Tworzenie aplikacji w Django  
+Rozdział 19 – Tworzenie stron  
+Rozdział 20 – Finalizacja aplikacji  
